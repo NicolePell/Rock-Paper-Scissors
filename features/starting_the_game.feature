@@ -12,3 +12,8 @@ Feature: Starting the game
 		Given I am on the new game page
 		When I have submitted my name
 		Then I see 'Welcome Trevor'
+
+	Scenario: Registering with no name
+		Given I am on the new game page
+		And I submit with no name
+		Then I should see 'Welcome Player'

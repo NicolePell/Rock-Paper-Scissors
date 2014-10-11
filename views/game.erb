@@ -1,4 +1,7 @@
 <body>
+	<% if @name == "" %>
+		<% @name = "Player" %>
+	<%  end %>
 	<h2>Welcome <%= @name %></h2>
 
 	<ul>

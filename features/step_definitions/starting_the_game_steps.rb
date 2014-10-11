@@ -22,3 +22,11 @@ end
 Then(/^I see 'Welcome Trevor'$/) do
   expect(page).to have_content "Welcome Trevor"
 end
+
+Given(/^I submit with no name$/) do
+  click_on "Let's go"
+end
+
+Then(/^I should see 'Welcome Player'$/) do
+  expect(page).to have_content "Welcome Player"
+end
