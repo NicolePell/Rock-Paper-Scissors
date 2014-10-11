@@ -1,4 +1,4 @@
-class Computer
+class Enemy
 
 	def weapons
 		['rock', 'paper', 'scissors']
