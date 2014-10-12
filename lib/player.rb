@@ -1,9 +1,12 @@
 class Player
 
-	attr_accessor :name
+	attr_accessor :name, :weapon
 
 	def initialize(name)
 		@name = name
-	end	
+	end
 
+	def choose(weapon)
+		weapon
+	end
 end
