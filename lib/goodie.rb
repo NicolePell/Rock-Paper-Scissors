@@ -1,4 +1,4 @@
-class Player
+class Goodie
 
 	attr_accessor :name, :weapon
 

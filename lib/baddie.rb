@@ -1,4 +1,4 @@
-class Enemy
+class Baddie
 
 	def weapons
 		['rock', 'paper', 'scissors']
