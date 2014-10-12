@@ -2,7 +2,7 @@ require 'game'
 
 describe Game do
 
-	let(:game) {Game.new}
+	let(:game) {Game.new(goodie, baddie)}
 	let(:goodie) { double :goodie, name: 'Goodie' }
 	let(:baddie) { double :baddie, name: 'Baddie' }
  
@@ -23,8 +23,8 @@ describe Game do
 		end
 
 		it 'should determine a winner' do
-			allow(goodie).to receive(:weapon).with('rock')
-			allow(baddie).to receive(:choice).with('scissors')
+			allow(goodie).to receive(:weapon).and_return 'rock'
+			allow(baddie).to receive(:choice).and_return 'scissors'
 			expect(game.winner).to eq goodie
 		end
 	
