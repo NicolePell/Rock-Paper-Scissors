@@ -22,7 +22,13 @@ Programs, Languages and Technologies used
 
 Classes
 -------
-
+- [x] Game
+- [x] Player
+- [x] Computer
 
 Features
 --------
+- [ ] Player can sign up
+- [ ] Player can play against a computer
+- [ ] Player can play against another player
+- [ ] Best of 3 can be played
