@@ -22,12 +22,22 @@ describe Game do
 			expect(game.players_count).to eq(2)
 		end
 
-		it 'should determine a winner' do
+		it 'should determine a winner if rock && scissors' do
 			allow(goodie).to receive(:weapon).and_return 'rock'
-			allow(baddie).to receive(:choice).and_return 'scissors'
+			allow(baddie).to receive(:weapon).and_return 'scissors'
 			expect(game.winner).to eq goodie
 		end
-	
+
+		it 'should determine a winner if paper && rock' do
+			allow(goodie).to receive(:weapon).and_return 'rock'
+			allow(baddie).to receive(:weapon).and_return 'paper'
+			expect(game.winner).to eq baddie
+		end
+
+	it 'should determine a winner if scissors && paper' do
+			allow(goodie).to receive(:weapon).and_return 'scissors'
+			allow(baddie).to receive(:weapon).and_return 'paper'
+			expect(game.winner).to eq goodie
+		end
 	end
-	
 end
