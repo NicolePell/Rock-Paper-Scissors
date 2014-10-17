@@ -7,7 +7,7 @@ When(/^I see "(.*?)"$/) do |arg1|
 end
 
 Then(/^I click 'Start a new game'$/) do
-  click_button "Start game"
+  click_on "Start game"
 end
 
 Given(/^I am on the new game page$/) do
