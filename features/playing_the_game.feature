@@ -6,9 +6,9 @@ Feature: Playing the game
 	Scenario: Pick a weapon
 		Given I am on the game page
 		When I see my weapon options
-		Then I select my weapon
+		When I select my weapon
+		Then I click on "Fight!"
 
-	Scenario: Computer's turn
-		Given player has selected a weapon
-		When the computer makes her weapon choice
-		Then I see the result
+	Scenario: Seeing a result
+		Given I am on the result page
+		Then I should see the winner of the game

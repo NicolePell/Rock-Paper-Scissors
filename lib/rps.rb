@@ -41,6 +41,10 @@ game = Game.new(goodie, baddie)
     erb :result
 
   end
+
+   get '/game/result' do
+    erb :result
+  end
   
 
   # start the server if ruby file executed directly

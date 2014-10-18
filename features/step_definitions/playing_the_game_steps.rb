@@ -7,17 +7,18 @@ When(/^I see my weapon options$/) do
 end
 
 Then(/^I select my weapon$/) do
+	choose("rock")
+  
+end
+
+Then(/^I click on "(.*?)"$/) do |arg1|
   click_on 'Fight!'
 end
 
-Given(/^player has selected a weapon$/) do
-  visit('/comp_turn')
+Given(/^I am on the result page$/) do
+  visit '/game/result'
 end
 
-When(/^the computer makes her weapon choice$/) do
-  expect(page).to have_content "Computer chose"
-end
-
-Then(/^I see the result$/) do
-	expect(page).to have_content "win"
+Then(/^I should see the winner of the game$/) do
+  expect(page).to have_content("winner")
 end
