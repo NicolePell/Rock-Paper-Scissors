@@ -14,8 +14,15 @@ Given(/^I am on the new game page$/) do
   visit ('/new_game')
 end
 
-When(/^I have submitted my name$/) do
+When(/^am asked "(.*?)"$/) do |arg1|
+  expect(page).to have_content "What is your name?"
+end
+
+When(/^I have filled in my name$/) do
   fill_in 'name', with: 'Trevor'
+end
+
+When(/^I have submitted my name$/) do
   click_on "Let's go"
 end
 

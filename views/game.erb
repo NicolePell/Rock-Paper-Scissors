@@ -3,6 +3,13 @@
 		<% @name = "Player" %>
 	<%  end %>
 	<h2>Welcome <%= @name %></h2>
-
+	Select your weapon of choice:
+	<form action="/game/result" method="post">
+	<input type="radio" name="goodie_choice" value="rock" >Rock<br>
+	<input type="radio" name="goodie_choice" value="paper">Paper<br>
+	<input type="radio" name="goodie_choice" value="scissors">Scissors<br>
+	<input type="submit" value="Fight!">
+	</form>
+ 
 
 </body>

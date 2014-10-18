@@ -7,7 +7,7 @@ When(/^I see my weapon options$/) do
 end
 
 Then(/^I select my weapon$/) do
-  click_on 'Rock'
+  click_on 'Fight!'
 end
 
 Given(/^player has selected a weapon$/) do

@@ -1,6 +1,6 @@
 Feature: Starting the game
 	In order to play Rock Paper Scissors
-	As a person who wants to make a decision
+	As a person who wants to play
 	I want to start a new game
 
 	Scenario: Registering Part 1
@@ -10,6 +10,8 @@ Feature: Starting the game
 
 	Scenario: Registering Part 2
 		Given I am on the new game page
+		When am asked "What is your name?"
+		And I have filled in my name
 		When I have submitted my name
 		Then I see 'Welcome Trevor'
 

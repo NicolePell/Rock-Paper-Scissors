@@ -1,5 +1,9 @@
 require 'sinatra/base'
 require 'capybara/rspec'
+require_relative 'game'
+require_relative 'goodie'
+require_relative 'baddie'
+
 
 
 class RockPaperScissors < Sinatra::Base
@@ -7,9 +11,12 @@ class RockPaperScissors < Sinatra::Base
 set :views, Proc.new { File.join(root, "../" "views") }
 set :public_folder, Proc.new { File.join(root, "../" "public") }
 
+goodie = Goodie.new(@name)
+baddie = Baddie.new
+game = Game.new(goodie, baddie)
 
   get '/' do
-    'Hello RockPaperScissors!'
+    
     erb :index
   end
 
@@ -25,6 +32,14 @@ set :public_folder, Proc.new { File.join(root, "../" "public") }
 
   get '/game' do
   	erb :game
+  end
+
+  post '/game/result' do
+    @g_choice = params[:goodie_choice].to_sym
+    @b_choice = baddie.choice
+    @result = game.winner(@g_choice, @b_choice)
+    erb :result
+
   end
   
 
