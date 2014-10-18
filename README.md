@@ -2,11 +2,11 @@ Rock Paper Scissors Game
 =========================
 
 A traditional settlement game on the web with the following features:
-- [ ] users have to enter their names before the game
-- [ ] users are presented with their choices (rock, paper, scissors)
-- [ ] users can choose one option
-- [ ] the game will choose a random option
-- [ ] a winner is declared
+- [x] users have to enter their names before the game
+- [x] users are presented with their choices (rock, paper, scissors)
+- [x] users can choose one option
+- [x] the game will choose a random option
+- [x] a winner is declared
 
 Extensions
 --------
@@ -28,7 +28,7 @@ Classes
 
 Features
 --------
-- [ ] Player can sign up
-- [ ] Player can play against a computer
+- [x] Player can sign up
+- [x] Player can play against a computer
 - [ ] Player can play against another player
 - [ ] Best of 3 can be played
