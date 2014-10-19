@@ -16,7 +16,7 @@
 </section>
 
 <h4><% if @result == "Goodie wins" %>
-		<%= @name %> You win!
+		<%= @name %> wins!
 	<% elsif @result == "Baddie wins" %>
 		Computer wins!
 	<% else @result == "Draw" %>
@@ -24,6 +24,6 @@
 	<% end %>
 </h4>
 
-<a class="myButton" href="/">Play again</a>
+<a class="myButton" href="/game">Play again</a>
 
 </body>

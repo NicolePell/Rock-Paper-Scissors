@@ -10,6 +10,7 @@ class RockPaperScissors < Sinatra::Base
 
 set :views, Proc.new { File.join(root, "../" "views") }
 set :public_folder, Proc.new { File.join(root, "../" "public") }
+enable :sessions
 
 goodie = Goodie.new(@name)
 baddie = Baddie.new
@@ -26,15 +27,18 @@ game = Game.new(goodie, baddie)
 
   post '/game' do
   	@name = params[:name]
-
+    session[:name] = @name
   	erb :game
   end
+
 
   get '/game' do
+    @name = session[:name]
   	erb :game
-  end
+  end 
 
   post '/game/result' do
+    @name = session[:name]
     @g_choice = params[:goodie_choice].to_sym
     @b_choice = baddie.choice
     @result = game.winner(@g_choice, @b_choice)
@@ -43,6 +47,7 @@ game = Game.new(goodie, baddie)
   end
 
    get '/game/result' do
+    @name = session[:name]
     erb :result
   end
   
