@@ -7,9 +7,13 @@
 	<h2>Welcome <%= @name %></h2>
 	<p>Select your weapon of choice:</p>
 	<form action="/game/result" method="post">
-	<p><input type="radio" name="goodie_choice" value="rock" id="rock"><img src="images/rock.png" alt="rock" width="160" height="125">Rock<br></p>
-	<p><input type="radio" name="goodie_choice" value="paper" id="paper"><img src="images/paper.png" alt="paper" width="160" height="125">Paper<br></p>
-	<p><input type="radio" name="goodie_choice" value="scissors" id="scissors"><img src="images/scissors.png" alt="scissors" width="125" height="140">Scissors<br></p>
+
+	<p><input type="image" src="images/rock.png" alt="rock" width="160" height="125" name="goodie_choice" value="rock">
+
+	<p><input type="image" src="images/paper.png" alt="paper" width="160" height="125"name="goodie_choice" value="paper">
+
+	<p><input type="image" src="images/scissors.png" alt="scissors" width="125" height="140" name="goodie_choice" value="scissors">
+
 	<input type="submit" value="Fight!">
 	</form>
 
