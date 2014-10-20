@@ -1,5 +1,5 @@
 require 'sinatra/base'
-require 'capybara/rspec'
+# require 'capybara/rspec'
 require_relative 'game'
 require_relative 'goodie'
 require_relative 'baddie'
