@@ -8,8 +8,8 @@ require_relative 'baddie'
 
 class RockPaperScissors < Sinatra::Base
 
-set :views, Proc.new { File.join(root, "../" "views") }
-set :public_folder, Proc.new { File.join(root, "../" "public") }
+set :views, Proc.new { File.join(root, "..", "views") }
+set :public_folder, Proc.new { File.join(root, "..", "public") }
 enable :sessions
 
 goodie = Goodie.new(@name)
