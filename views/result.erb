@@ -1,32 +1,26 @@
-<body>
 
-<h1>And the winner is...</h1>
 
+	<h1>And the winner is...</h1>
 <section class="weapon_choice">
 
-<section class="g_choice">
-Your choice was <%= @g_choice %>
-</section>
+	<section class="g_choice">
+	Your choice was <%= @g_choice %>
+	</section>
 
+	<section class="b_choice">
+	Computer's choice was <%= @b_choice %>
+	</section><br>
 
-<section class="b_choice">
-Computer's choice was <%= @b_choice %>
-</section><br>
+	<h4><% if @result == "Goodie wins" %>
+			<%= @name %> wins!
+		<% elsif @result == "Baddie wins" %>
+			Computer wins!
+		<% else @result == "Draw" %>
+			It's a Draw!
+		<% end %>
+	</h4>
 
+	</section>
+	
+	<a class="myButton" href="/game">Play again</a>
 
-
-<h4><% if @result == "Goodie wins" %>
-		<%= @name %> wins!
-	<% elsif @result == "Baddie wins" %>
-		Computer wins!
-	<% else @result == "Draw" %>
-		It's a Draw!
-	<% end %>
-</h4>
-
-</section>
-
-
-<a class="myButton" href="/game">Play again</a>
-
-</body>

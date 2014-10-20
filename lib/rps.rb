@@ -9,7 +9,7 @@ require_relative 'baddie'
 class RockPaperScissors < Sinatra::Base
 
 set :views, Proc.new { File.join(root, "..", "views") }
-set :public_folder, 'public'
+set :public_folder, Proc.new { File.join(root, "..", "public") }
 enable :sessions
 
 goodie = Goodie.new(@name)
@@ -44,11 +44,6 @@ game = Game.new(goodie, baddie)
     @result = game.winner(@g_choice, @b_choice)
     erb :result
 
-  end
-
-   get '/game/result' do
-    @name = session[:name]
-    erb :result
   end
   
 
