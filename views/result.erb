@@ -5,15 +5,15 @@
 <section class="weapon_choice">
 
 <section class="g_choice">
-<%= @g_choice %>
+Your choice was <%= @g_choice %>
 </section>
 
 
 <section class="b_choice">
-<%= @b_choice %>
-</section>
+Computer's choice was <%= @b_choice %>
+</section><br>
 
-</section>
+
 
 <h4><% if @result == "Goodie wins" %>
 		<%= @name %> wins!
@@ -23,6 +23,9 @@
 		It's a Draw!
 	<% end %>
 </h4>
+
+</section>
+
 
 <a class="myButton" href="/game">Play again</a>
 

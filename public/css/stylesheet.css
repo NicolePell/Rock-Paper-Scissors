@@ -25,15 +25,20 @@ p {
 
 .weapon_choice {
 	width: 500px;
+	float: center;
 }
 
 .g_choice {
 	float: left;
+	font-size: 1.5em;
+	font-family: 'Source Sans Pro', sans-serif;
 
 }
 
 .b_choice {
 	float: right;
+	font-size: 1.5em;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 
@@ -125,6 +130,8 @@ input[type="text"] {
 	-webkit-border-radius:11px;
 	font-family:'Titan One', cursive;
 	font-size:1.5em;
+}
 
+input[type="radio"] {
 
 }
