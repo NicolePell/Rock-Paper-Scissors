@@ -6,9 +6,5 @@ Feature: Playing the game
 	Scenario: Pick a weapon
 		Given I am on the game page
 		When I see my weapon options
-		When I select my weapon
-		Then I click on "Fight!"
-
-	Scenario: Seeing a result
-		Given I am on the result page
-		Then I should see the winner of the game
+		And I select my weapon
+		Then I should see the result
